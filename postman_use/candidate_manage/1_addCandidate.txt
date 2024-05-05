@@ -1,0 +1,21 @@
+Select POST Request 
+
+-> After login Admin User 
+
+-> Copy the bearer token from postman body terminal (after login, then get the token)
+
+-> set bearer token 
+
+-> http://localhost:8000/candidate
+
+-> body -> raw -> json
+
+{
+    "name": "Rahul Gandhi",
+    "party": "INC",
+    "age": 53,
+    "votes": []
+}
+
+-> SEND
+

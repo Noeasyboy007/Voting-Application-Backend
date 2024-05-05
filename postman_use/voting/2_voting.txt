@@ -1,0 +1,25 @@
+Select POST Request 
+
+http://localhost:8000/user/login
+
+-> Copy the bearer token from postman body terminal
+
+-> set bearer token 
+
+-> body -> raw -> json
+
+{
+    "aadharCardNumber": Your_Aadhar_CardNumber,
+    "password": "Your_password"
+}
+
+-> Copy the bearer token from postman body terminal (after login, then get the token)
+
+-> set bearer token 
+
+-> Select GET Request
+
+http://localhost:8000/candidate/vote/candidate_id
+
+
+SEND->

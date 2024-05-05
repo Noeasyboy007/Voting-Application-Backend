@@ -57,11 +57,6 @@ app.get('/signup', (req, res) => {
 });
 
 
-
-
-
-
-
 //Set PORT environment
 const PORT = process.env.PORT || 5000;
 

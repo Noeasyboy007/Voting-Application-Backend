@@ -1,0 +1,4 @@
+Select GET Request
+
+http://localhost:8000/candidate
+

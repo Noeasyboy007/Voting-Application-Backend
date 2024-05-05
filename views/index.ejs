@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Application</title>
+    <!-- Link Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Add any custom CSS styles here */
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="display-4 mb-4">Welcome to the Voting Application</h1>
+        
+        <% if (user) { %>
+            <!-- Display user information if logged in -->
+            <div class="alert alert-success" role="alert">
+                Welcome, <%= user.name %>! Your role: <%= user.role %>.
+                <a href="/logout" class="btn btn-danger btn-sm ml-2">Logout</a>
+            </div>
+        <% } else { %>
+            <!-- Display login and signup buttons if not logged in -->
+            <div class="alert alert-info" role="alert">
+                <a href="/login" class="btn btn-primary btn-lg">Login</a>
+                <a href="/signup" class="btn btn-success btn-lg ml-2">Sign Up</a>
+            </div>
+        <% } %>
+
+        <h2 class="mt-5">Candidates:</h2>
+        <ul class="list-group mt-3">
+            <% candidates.forEach(candidate => { %>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <!-- Display candidate information -->
+                    <span><%= candidate.name %> - <%= candidate.party %></span>
+                    
+                    <% if (user && user.role === 'admin') { %>
+                        <!-- Display edit and delete buttons for admin -->
+                        <div>
+                            <button onclick="editCandidate('<%= candidate._id %>')" class="btn btn-info btn-sm">Edit</button>
+                            <button onclick="deleteCandidate('<%= candidate._id %>')" class="btn btn-danger btn-sm ml-2">Delete</button>
+                        </div>
+                    <% } else if (user && user.role === 'voter' && !user.isVoted) { %>
+                        <!-- Display vote button for voter if not voted -->
+                        <button onclick="vote('<%= candidate._id %>')" class="btn btn-primary btn-sm">Vote</button>
+                    <% } %>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+
+    <!-- JavaScript code for handling voting, editing, and deleting candidates -->
+    <script>
+        async function vote(candidateId) {
+            // Implement vote functionality here
+            alert('Vote functionality not implemented yet');
+        }
+
+        async function editCandidate(candidateId) {
+            // Implement edit functionality here
+            alert('Edit functionality not implemented yet');
+        }
+
+        async function deleteCandidate(candidateId) {
+            // Implement delete functionality here
+            alert('Delete functionality not implemented yet');
+        }
+    </script>
+</body>
+</html>

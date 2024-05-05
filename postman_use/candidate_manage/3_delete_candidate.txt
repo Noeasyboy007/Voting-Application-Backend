@@ -1,0 +1,11 @@
+-> After login Admin User 
+
+-> Copy the bearer token from postman body terminal (after login, then get the token)
+
+-> set bearer token 
+
+-> Select DELETE Request 
+
+-> http://localhost:8000/candidate/candidate_id
+
+-> SEND

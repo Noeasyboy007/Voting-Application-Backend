@@ -1,0 +1,4 @@
+/node_modules
+.env
+/dummy_data
+/temp_data.json

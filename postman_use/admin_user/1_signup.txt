@@ -1,0 +1,21 @@
+Select the POST Request then
+
+http://localhost:8000/user/signup
+
+-> body -> raw -> json
+
+
+//For Admin User
+{
+        "name": "Full_Name",
+        "age": 23,
+        "mobile": "1234543210",
+        "email": "example@gmail.com",
+        "address": "Your_Adress",
+        "aadharCardNumber": 12_digit_Number,
+        "password": "12345",
+        "role": "admin
+    }
+        
+
+-> SEND
